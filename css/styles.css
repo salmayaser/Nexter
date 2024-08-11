@@ -14,7 +14,7 @@ html {
 body {
   line-height: 1.6;
   font-family: "Nunito", sans-serif;
-  color: #c69963;
+  color: #6d5d4b;
 }
 
 .container {
@@ -40,9 +40,12 @@ body {
 }
 
 .features {
-  background-color: #aaa;
   grid-column: center-start/center-end;
   grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 6rem;
+  gap: 6rem;
 }
 
 .story__pictures {
