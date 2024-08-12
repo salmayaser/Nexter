@@ -132,8 +132,23 @@ body {
 }
 
 .story__pictures {
-  background-color: #c69963;
+  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
   grid-column: full-start/col-end 4;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+}
+.story__img1 {
+  width: 100%;
+  grid-row: 2/6;
+  grid-column: 2/6;
+}
+.story__img2 {
+  width: 115%;
+  grid-column: 4/-1;
+  grid-row: 4/-1;
+  z-index: 2;
 }
 .story__content {
   background-color: #f9f7f6;
