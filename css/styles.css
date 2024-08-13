@@ -165,11 +165,36 @@ body {
   margin-bottom: 4rem;
 }
 
-.homes {
-  background-color: blue;
-  grid-column: center-start/center-end;
+.home__price svg, .home__area svg, .home__rooms svg, .home__location svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #c69963;
 }
 
+.homes {
+  grid-column: center-start/center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  column-gap: 4rem;
+  row-gap: 4rem;
+}
+
+.home {
+  background-color: #f9f7f6;
+  position: relative;
+}
+.home__img {
+  width: 100%;
+}
+.home__icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  fill: #c69963;
+}
 .gallary {
   background-color: rebeccapurple;
   grid-column: full-start/full-end;
