@@ -2,6 +2,7 @@
   width: 2rem;
   height: 2rem;
   fill: $color-primary;
+  margin: 0 1rem;
 }
 
 .homes {
@@ -16,9 +17,14 @@
 .home {
   background-color: $color-grey-light-1;
   position: relative;
+  display: grid;
+  row-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 
   &__img {
     width: 100%;
+    grid-column: 1 / span 2;
+    grid-row: 1/2;
   }
   &__icon {
     position: absolute;
@@ -29,25 +35,53 @@
     fill: $color-primary;
   }
   &__name {
+    font-size: 1.9rem;
+    padding: 1.5rem 3rem;
+    background-color: $color-secondary;
+    color: #fff;
+    display: inline-block;
+    grid-column: 1 / span 2;
+    text-align: center;
+    font-family: $font-display;
+    font-weight: 400;
+    width: 80%;
+    justify-self: center;
+    grid-row: 1/2;
+    align-self: end;
+    transform: translateY(50%);
   }
   &__location {
+    font-size: 1.5rem;
+    display: flex;
+    margin-top: 3rem;
     svg {
       @extend %svg;
     }
   }
   &__rooms {
+    font-size: 1.5rem;
+    display: flex;
+    margin-top: 3rem;
     svg {
       @extend %svg;
     }
   }
   &__area {
+    font-size: 1.5rem;
+    display: flex;
     svg {
       @extend %svg;
     }
   }
   &__price {
+    font-size: 1.5rem;
+    display: flex;
     svg {
       @extend %svg;
     }
+  }
+  .btn {
+    grid-column: 1 / span 2;
+    border-radius: 0;
   }
 }

@@ -169,6 +169,7 @@ body {
   width: 2rem;
   height: 2rem;
   fill: #c69963;
+  margin: 0 1rem;
 }
 
 .homes {
@@ -183,9 +184,14 @@ body {
 .home {
   background-color: #f9f7f6;
   position: relative;
+  display: grid;
+  row-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 .home__img {
   width: 100%;
+  grid-column: 1/span 2;
+  grid-row: 1/2;
 }
 .home__icon {
   position: absolute;
@@ -195,6 +201,45 @@ body {
   height: 3rem;
   fill: #c69963;
 }
+.home__name {
+  font-size: 1.9rem;
+  padding: 1.5rem 3rem;
+  background-color: #101d2c;
+  color: #fff;
+  display: inline-block;
+  grid-column: 1/span 2;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  width: 80%;
+  justify-self: center;
+  grid-row: 1/2;
+  align-self: end;
+  transform: translateY(50%);
+}
+.home__location {
+  font-size: 1.5rem;
+  display: flex;
+  margin-top: 3rem;
+}
+.home__rooms {
+  font-size: 1.5rem;
+  display: flex;
+  margin-top: 3rem;
+}
+.home__area {
+  font-size: 1.5rem;
+  display: flex;
+}
+.home__price {
+  font-size: 1.5rem;
+  display: flex;
+}
+.home .btn {
+  grid-column: 1/span 2;
+  border-radius: 0;
+}
+
 .gallary {
   background-color: rebeccapurple;
   grid-column: full-start/full-end;
