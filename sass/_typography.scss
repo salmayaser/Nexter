@@ -27,13 +27,15 @@
   font-size: 1.6rem;
   color: $color-primary;
   text-transform: uppercase;
+  color: $font-display;
 }
 .heading-4 {
   @extend %heading;
   font-size: 1.7rem;
+  color: $font-display;
 
   &--light {
-    color: $font-display;
+    color: #fff;
   }
 
   &--dark {

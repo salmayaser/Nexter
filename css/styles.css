@@ -50,13 +50,15 @@ body {
   font-size: 1.6rem;
   color: #c69963;
   text-transform: uppercase;
+  color: "Josefin Sans", sans-serif;
 }
 
 .heading-4 {
   font-size: 1.7rem;
+  color: "Josefin Sans", sans-serif;
 }
 .heading-4--light {
-  color: "Josefin Sans", sans-serif;
+  color: #fff;
 }
 .heading-4--dark {
   color: #101d2c;
@@ -177,6 +179,28 @@ body {
 .realtors {
   background-color: #101d2c;
   grid-column: col-start 7/full-end;
+  display: grid;
+  grid-template-rows: repeat(4, max-content);
+  justify-content: center;
+  align-content: center;
+  row-gap: 3rem;
+  justify-items: center;
+}
+.realtors__realtor {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 2rem;
+  align-items: center;
+}
+.realtors__img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  grid-row: 1/span 2;
+}
+.realtors__sales {
+  font-size: 1.2rem;
+  color: #aaa;
 }
 
 .features {
