@@ -33,6 +33,11 @@ body {
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
 }
+@media only screen and (max-width: 46em) {
+  .container {
+    grid-template-rows: 6rem max-content 80vh min-content 40vw repeat(3, min-content);
+  }
+}
 
 .heading-4, .heading-2, .heading-1 {
   font-family: "Josefin Sans", sans-serif;
@@ -118,7 +123,7 @@ body {
   .sidebar {
     grid-column: 1/-1;
     grid-row: 1/2;
-    text-align: start;
+    text-align: end;
   }
 }
 .sidebar__btn {
@@ -168,6 +173,12 @@ body {
   row-gap: 1.5rem;
   justify-content: center;
 }
+@media only screen and (max-width: 46em) {
+  .header {
+    grid-column: full-start/full-end;
+    grid-row: 2/3;
+  }
+}
 .header__logo {
   height: 3rem;
   align-self: center;
@@ -212,9 +223,14 @@ body {
   row-gap: 4vh;
   justify-items: center;
 }
+@media only screen and (max-width: 46em) {
+  .realtors {
+    grid-column: full-start/full-end;
+  }
+}
 .realtors__realtor {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: min-content max-content;
   column-gap: 2rem;
   align-items: center;
 }
@@ -243,6 +259,12 @@ body {
     grid-row: 3/4;
   }
 }
+@media only screen and (max-width: 46em) {
+  .features {
+    grid-column: full-start/full-end;
+    grid-row: 4/5;
+  }
+}
 
 .feature {
   display: grid;
@@ -268,16 +290,36 @@ body {
   grid-template-rows: repeat(6, 1fr);
   align-items: center;
 }
+@media only screen and (max-width: 46em) {
+  .story__pictures {
+    grid-column: full-start/full-end;
+    grid-row: 6/7;
+  }
+}
 .story__img1 {
   width: 100%;
   grid-row: 2/6;
   grid-column: 2/6;
+}
+@media only screen and (max-width: 46em) {
+  .story__img1 {
+    height: 80%;
+    object-fit: cover;
+  }
 }
 .story__img2 {
   width: 115%;
   grid-column: 4/-1;
   grid-row: 4/-1;
   z-index: 2;
+}
+@media only screen and (max-width: 46em) {
+  .story__img2 {
+    height: 70%;
+    width: 90%;
+    grid-column: 4/-1;
+    object-fit: cover;
+  }
 }
 .story__content {
   background-color: #f9f7f6;

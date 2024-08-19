@@ -14,6 +14,11 @@
   row-gap: 1.5rem;
   justify-content: center;
 
+  @media only screen and (max-width: $md) {
+    grid-column: full-start/ full-end;
+    grid-row: 2/3;
+  }
+
   &__logo {
     height: 3rem;
     align-self: center;

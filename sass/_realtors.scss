@@ -7,10 +7,13 @@
   align-content: center;
   row-gap: 4vh;
   justify-items: center;
+  @media only screen and (max-width: $md) {
+    grid-column: full-start / full-end;
+  }
 
   &__realtor {
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: min-content max-content;
     column-gap: 2rem;
     align-items: center;
   }
