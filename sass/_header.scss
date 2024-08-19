@@ -7,8 +7,8 @@
     url(../img/hero.jpeg);
   background-position: center;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(auto, max-content);
   padding: 8rem;
   padding-top: 4rem;
   row-gap: 1.5rem;
@@ -44,8 +44,10 @@
     display: grid;
     grid-template-columns: repeat(4, auto);
     justify-items: center;
+    align-items: center;
     img {
-      height: 2.4rem;
+      max-height: 2.4rem;
+      max-width: 100%;
       filter: brightness(0.5);
     }
   }

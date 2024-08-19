@@ -3,6 +3,11 @@
   grid-column: sidebar-start/ sidebar-end;
   grid-row: 1/-1;
   text-align: center;
+  @media only screen and (max-width: $large) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: start;
+  }
 
   &__btn {
     width: 50%;
@@ -13,6 +18,10 @@
     position: relative;
     margin-top: 3rem;
     cursor: pointer;
+    @media only screen and (max-width: $large) {
+      width: 3rem;
+      margin: 3rem 2rem;
+    }
     &::before {
       content: "";
       position: absolute;

@@ -10,6 +10,11 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   line-height: 1.6;
@@ -21,6 +26,12 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 65em) {
+  .container {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
 }
 
 .heading-4, .heading-2, .heading-1 {
@@ -103,6 +114,13 @@ body {
   grid-row: 1/-1;
   text-align: center;
 }
+@media only screen and (max-width: 65em) {
+  .sidebar {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: start;
+  }
+}
 .sidebar__btn {
   width: 50%;
   height: 2px;
@@ -112,6 +130,12 @@ body {
   position: relative;
   margin-top: 3rem;
   cursor: pointer;
+}
+@media only screen and (max-width: 65em) {
+  .sidebar__btn {
+    width: 3rem;
+    margin: 3rem 2rem;
+  }
 }
 .sidebar__btn::before {
   content: "";
@@ -137,8 +161,8 @@ body {
   background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url(../img/hero.jpeg);
   background-position: center;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(auto, max-content);
   padding: 8rem;
   padding-top: 4rem;
   row-gap: 1.5rem;
@@ -170,9 +194,11 @@ body {
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-items: center;
+  align-items: center;
 }
 .header__seeon-logos img {
-  height: 2.4rem;
+  max-height: 2.4rem;
+  max-width: 100%;
   filter: brightness(0.5);
 }
 
@@ -211,6 +237,11 @@ body {
   margin: 6rem 3rem;
   gap: 6rem;
   align-items: start;
+}
+@media only screen and (max-width: 65em) {
+  .features {
+    grid-row: 3/4;
+  }
 }
 
 .feature {
