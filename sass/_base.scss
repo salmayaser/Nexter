@@ -59,7 +59,7 @@ body {
       [center-end] minmax(6rem, 1fr) [full-end];
   }
   @media only screen and (max-width: $md) {
-    grid-template-rows: 6rem max-content 80vh min-content 40vw repeat(
+    grid-template-rows: 6rem max-content 30vh max-content max-content repeat(
         3,
         min-content
       );
